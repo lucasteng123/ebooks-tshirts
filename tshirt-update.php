@@ -7,13 +7,8 @@
 </head>
 <body>
 <div class="container">
-	<div class="row">
-		<h1>T-Shirt Upload/Update</h1>
-		<hr>
-	</div>
-
 	<div class="row tshirt-container">
-		<?php echo file_get_contents("http://127.0.0.1/tshirt-list")?>
+		<?php echo file_get_contents("http://127.0.0.1/Best_E_Books_TShirt/tshirt-list")?>
 	</div>
 
 	<div class="row">
@@ -26,16 +21,30 @@
 			<form action="/tshirt-update"  method="post">
 
 				<div class="form-group">
-					<label for="image"> Path to Image </label>
+				<label for="image"> Path to Image </label>
+				<div class="input-group">
+					
 					<input type="text" class="form-control" name="image">
+					<span class="input-group-btn">
+        				<button class="btn btn-default" type="button">Browse</button>
+      				</span>
+				</div>
+				</div>
+				<div class="form-group">
+					<label for="name"> Name for T-Shirt </label>
+					<input type="text" class="form-control" name="name">
+				</div>
+				<div class="form-group">
+					<label for="name"> Description </label>
+					<input type="text" class="form-control" name="description">
 				</div>
 				<div class="form-group">
 					<label for="colors"> Desired Colors (comma seperated) </label>
 					<input type="text" class="form-control" name="colors">
 				</div>
 				<div class="form-group">
-					<label for="name"> Name of T-Shirt </label>
-					<input type="text" class="form-control" name="name">
+					<label for="colors"> Desired Sizes (comma seperated) </label>
+					<input type="text" class="form-control" name="size">
 				</div>
 				<div class="input-group" style="padding:10px 0px 30px 0px">
 					
