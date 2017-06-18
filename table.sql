@@ -9,6 +9,8 @@ CREATE TABLE IF NOT EXISTS tshirts
 		colors TEXT,
 		active TINYINT DEFAULT 1,
 		price FLOAT DEFAULT 15.99,
+		size TEXT,
+		description TEXT,
         PRIMARY KEY (id)
         ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
 
@@ -20,6 +22,7 @@ CREATE TABLE IF NOT EXISTS orders
         quantity MEDIUMINT,
         state TINYINT,
 		tracking TEXT,
+		chosen_size TEXT,
 		FOREIGN KEY (tshirt_id) REFERENCES tshirts(id),
         PRIMARY KEY (order_id)
         ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
